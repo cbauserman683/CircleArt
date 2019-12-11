@@ -10,13 +10,23 @@ public class Dot extends Component {
 	private int radius;
 	
 	
-	
 	public Dot() {
 	
 		this.center = new Point(0,0);
 		this.color = Color.BLACK;
-		this.radius = 1;
+		this.radius = 10;
 		
+	}
+	
+	public Dot(int x, int y, int rad, Color col) {
+		this.color = col;
+		
+		this.radius = rad;
+		
+		//calculate center
+		this.center = new Point();
+		this.center.x = x - (this.radius/2);
+		this.center.y = y - (this.radius/2);
 	}
 	
 	public Point getCenter() {
@@ -49,13 +59,13 @@ public class Dot extends Component {
 		//set the color
 		g.setColor(this.color);
 		
-		//calculate center
-		int x = this.center.x - (this.radius/2);
-		int y = this.center.y - (this.radius/2);
-		
 		//draw oval
-		g.fillOval(x, y, this.radius, this.radius);
+		g.fillOval(this.center.x, this.center.y, this.radius, this.radius);
 		
+	}
+	
+	public String toString() {
+		return "Radius: " + this.radius + " Color: " + this.color;
 	}
 	
 
