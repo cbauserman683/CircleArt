@@ -56,11 +56,14 @@ public class Dot extends Component {
 	@Override
 	public void paint(Graphics g) {
 		
+		System.out.println("paint circle");
+		
 		//set the color
 		g.setColor(this.color);
 		
 		//draw oval
 		g.fillOval(this.center.x, this.center.y, this.radius, this.radius);
+		
 		
 	}
 	

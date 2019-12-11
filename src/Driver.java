@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.io.File;
 
 import javax.swing.JFileChooser;
@@ -11,8 +12,7 @@ public class Driver {
 		// TODO Auto-generated method stub
 		
 		JFrame frame = new JFrame();
-		frame.setSize(500, 500);
-		frame.setVisible(true);
+		frame.setSize(750, 750);
 		
 		JFileChooser fc = new JFileChooser();
 		fc.showOpenDialog(frame);
@@ -26,11 +26,21 @@ public class Driver {
 		manager.manage();
 		
 		System.out.println("finish managing");
-		//JPanel panel = manager.drawImage();
+		JPanel panel = new JPanel();
+		panel.setSize(500, 500);
+		
 		
 		//frame.add(panel);
-		frame.add(manager.drawImage());
-		frame.repaint();
+		//panel.add(new Dot());
+		panel.add(new JLabel("label 1"));
+		panel.add(new Dot());
+		panel.add(new Dot(50, 50, 26, Color.BLUE));
+		panel.add(new JLabel("label 2"));
+		frame.add(panel);
+		
+		frame.setVisible(true);
+		//frame.add(manager.drawImage());
+		//frame.repaint();
 		
 		
 	}
