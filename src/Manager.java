@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Label;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.awt.Point;
@@ -94,7 +95,8 @@ public class Manager {
 		panel.setSize(499, 499);
 		
 		for(Dot dot: this.dots) {
-			panel.add(dot);
+			//panel.add(dot);
+			panel.add(new Label(dot.toString()));
 			System.out.println(dot.toString());
 		}
 		

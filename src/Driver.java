@@ -32,11 +32,13 @@ public class Driver {
 		
 		//frame.add(panel);
 		//panel.add(new Dot());
-		panel.add(new JLabel("label 1"));
-		panel.add(new Dot());
-		panel.add(new Dot(50, 50, 26, Color.BLUE));
-		panel.add(new JLabel("label 2"));
-		frame.add(panel);
+//		panel.add(new JLabel("label 1"));
+//		panel.add(new Dot());
+//		panel.add(new Dot(50, 50, 26, Color.BLUE));
+//		panel.add(new JLabel("label 2"));
+//		frame.add(panel);
+		
+		frame.add(manager.drawImage());
 		
 		frame.setVisible(true);
 		//frame.add(manager.drawImage());
