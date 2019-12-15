@@ -50,13 +50,7 @@ public class Dot extends Component {
 	public void setColor(Color newColor) {
 		this.color = newColor;
 	}
-	
-	public void growRadius() {
-		if(this.radius < 10) {
-			this.radius++;
-		}
-	}
-	
+		
 	public int getRadius() {
 		return this.radius;
 	}
